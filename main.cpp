@@ -11,7 +11,7 @@ bool isLoggedin()
     cin >> userName;
     cout << "Enter your password : ";
     cin >> password;
-    ifstream read("/Users/raqueebabdul/Documents/tests/" + userName + ".txt", ios::in);
+    ifstream read("** file path you want to save your file **" + userName + ".txt", ios::in);
     getline(read, un);
     getline(read, pw);
 
@@ -34,7 +34,7 @@ int main()
         cout << "Select a password : ";
         cin >> password;
         ofstream file;
-        file.open("/Users/raqueebabdul/Documents/tests/" + userName + ".txt", ios::out);
+        file.open("** file path you want to save your file **" + userName + ".txt", ios::out);
         file << userName << endl
              << password;
         file.close();
